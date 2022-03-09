@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* ============================================ */
+/*         SETUP AND DEFAULT VALUES             */
+/* ============================================ */
+
+$theme-primary: #e67e22;
+$text-color-dark: #444;
+$color-warning: #e3301e;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    color: #444;
+}
+
+body {
+    height: 100vh;
+}
+
+input:focus {
+    outline: 0;
+}
+
+
+/* ============================================ */
+/*             REUSABLE COMPONENTS              */
+/* ============================================ */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+a:link,
+a:visited {
+    color: $text-color-dark;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: $theme-primary;
+}
+
+.card-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* ============================================ */
+/*                  NAV BAR                     */
+/* ============================================ */
+
+nav {
+    width: 90%;
+    margin: auto;
+
+    .brand {
+        display: inline-block;
+        padding-top: 18px;
+        padding-left: 25px;
+        font-size: 285%;
+
+        h1 {
+            font-size: 90%;
+            letter-spacing: 5px;
+            display: none;
+        }
+    }
+
+    &:after {
+        display: block;
+        height: 1px;
+        background-color: #000;
+        content: ' ';
+        width: 100%;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+
+    .main-nav {
+        float: right;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin: 35px 20px;
+        }
+
+        a:link,
+        a:visited {
+            padding: 8px 0px;
+            text-transform: uppercase;
+            font-size: 80%;
+        }
+    }
+}
+
+
+/* ============================================ */
+/*                  FORM AREA                   */
+/* ============================================ */
+
+.card {
+
+    background-image: linear-gradient(105deg, 
+        rgba(0,0,0,.6) 0%,
+        rgba(0,0,0,.6) 50%,
+        transparent 50%), 
+        url(../img/hero-bg.jpg);
+    background-size: fill;
+    background-repeat: none;
+    border-radius: 3px;
+    box-shadow: 5px 5px 20px #666;
+    width: 90%;
+    height: 500px;
+
+    .login-form {
+        width: 90%;
+        min-width: 400px;
+        height: 80%;
+        margin: auto;
+        padding: 35px 35px;
+        background-color: transparent;
+        border-radius: 5px;
+        color: #fff;
+
+        input {
+            height: 30px;
+            width: 100%;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding-left: 10px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+        
+        label {
+            margin: 10px 0;
+            font-size: 90%;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: $theme-primary;
+            border: none;
+            border-radius: 5px;
+            height: 40px;
+            padding: 5px 0px;
+            color: #fff;
+            font-size: 95%;
+            margin-bottom: 0px;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            color: #333;
+        }
+
+
+        h2 {
+            text-align: center;
+            padding-bottom: 5px;
+            letter-spacing: 2px;        
+        }
+
+        h2:after {
+            display: block;
+            height: 1px;
+            background-color: #e67e22;
+            content : ' ';
+            width: 150px;
+            margin: auto;
+            margin-top: 5px;            
+        }
+
+        a:hover,
+        a:active {
+            color: $theme-primary;
+        }
+
+        .invalid {
+
+            input {
+                border: 1px solid $color-warning;
+
+                &::placeholder {
+                    color: $color-warning;
+                }
+
+            }
+
+            .dynamic-msg {
+                color: #fff;
+                font-size: 60%;
+                padding: 2px 15px;
+                margin-bottom: 5px;
+                text-align: right;
+            }
+
+            ion-icon {
+                color: $color-warning;
+            }
+        }
+    }
+
+    fieldset {
+        border: 1px solid #fff;
+        padding: 15px;
+        padding-right: 30px;
+
+        & + .invalid {
+            border: 1px solid $color-warning;
+        }
+    }
+
+    legend {
+        text-align: center;
+        font-size: 150%;
+        padding: 0px 15px;
+    }
+
+    .form-icon {
+        font-size: 150%;
+        text-align: center;
+    }
+
+    .form-msg {
+        font-size: 70%;
+        text-align: center;
+        padding-top: 6px;
+        color: #cdcdcd;
+        margin-bottom: 25px;
+    }
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .remember-me {
+        text-align: right;
+        width: 100%;
+        position: relative;
+        padding-right: 10px;
+
+        input[type=checkbox] {
+            width: auto;
+            margin-bottom: 0px;
+            padding-top: 5px;
+        }
+    
+        label {
+            font-size: 60%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translate(-15px, -50%)
+        }
+    }    
+}
+
+
+/* ============================================ */
+/*              MEMBERS AREA                    */
+/* ============================================ */
+
+.members-area {
+    position: relative;
+    background-image: url(../img/hero-bg.jpg);
+}
+
+.member-msg {
+    
+    h1, p {
+        color: #fff;
+        text-align: center;
+    }
+
+    p {
+        font-size: 90%;
+        padding-top: 15px;
+    }
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(0, -50%);
+    background-color: rgba(0,0,0,.65);
+    padding: 25px 0;
+}
+
+
+/* ============================================ */
+/*                  FOOTER                      */
+/* ============================================ */
+
+footer {
+
+    text-align: center;
+    margin-top: 100px;
+    height: 50px;
+    border-top: 1px solid #555;
+
+    p {
+        margin: 35px 0;
+        font-size: 65%;
+    }
+}

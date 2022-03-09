@@ -1,0 +1,137 @@
+/*  
+    Big tablets, small laptops and upwards -- 1000px 
+    There are no special accomodations for these screens. They 
+    will just get the css as specified in style.scss with a 
+    maximum width of our 'row' class
+*/
+/*  
+    Small tablets to big tablets and small laptops -- 800 to 999 px
+*/
+@media only screen and (max-width: 999px) {
+  .card {
+    background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 55%, transparent 55%), url(../img/hero-bg.jpg); }
+    .card .login-form {
+      padding-top: 35px;
+      min-width: 300px;
+      width: 100%; }
+  .members-area {
+    background-image: url(../img/hero-bg.jpg); } }
+
+/*  
+    big phones to small tablets -- 501 to 799 px
+*/
+@media only screen and (max-width: 799px) {
+  nav .brand {
+    display: block;
+    text-align: center;
+    padding-left: 0px; }
+    nav .brand:after {
+      display: block;
+      height: 1px;
+      background-color: #000;
+      content: ' ';
+      width: 100%;
+      margin: auto; }
+  nav .main-nav {
+    float: none;
+    text-align: center; }
+    nav .main-nav li {
+      margin: 35px 4%; }
+  .card {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.jpg); }
+  .card .login-form {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 80%; }
+  .members-area {
+    background-image: url(../img/hero-bg.jpg); }
+  .member-msg {
+    font-size: 85%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px 0; } }
+
+/*  
+    big phones to small tablets -- 501 to 799 px
+*/
+@media only screen and (max-width: 599px) {
+  nav .brand {
+    display: block;
+    text-align: center;
+    padding-left: 0px; }
+    nav .brand:after {
+      display: block;
+      height: 1px;
+      background-color: #000;
+      content: ' ';
+      width: 100%;
+      margin: auto; }
+  nav .main-nav {
+    float: none;
+    text-align: center; }
+    nav .main-nav li {
+      margin: 35px 2%; }
+  .card {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.jpg); }
+  .card .login-form {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%; }
+  .members-area {
+    background-image: url(../img/hero-bg.jpg); }
+  .member-msg {
+    font-size: 85%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px 0; } }
+
+/* Small to medium phones portrait and landscape -- 402 to 499 px */
+@media only screen and (max-width: 499px) {
+  nav::after {
+    height: 2px;
+    background-color: #e67e22; }
+  nav .brand::after {
+    height: 2px;
+    background-color: #e67e22; }
+  nav .brand a {
+    color: #fff; }
+  nav .main-nav li a {
+    color: #fff; }
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 100vh; }
+  .main-nav:before, nav:after {
+    color: #fff; }
+  .card-container {
+    width: 100%; }
+  .card {
+    background-image: none;
+    box-shadow: none;
+    width: 100%; }
+    .card .login-form {
+      width: 90%;
+      padding: 0; }
+  footer {
+    color: #fff;
+    border-top: 2px solid #e67e22; }
+  .logged-in {
+    background-image: url(../img/hero-bg.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 100vh; }
+  .member-msg {
+    font-size: 75%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px 0; } }
+
+@media only screen and (max-width: 401px) {
+  nav .main-nav li {
+    display: block; }
+    nav .main-nav li a {
+      color: #fff; } }
